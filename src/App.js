@@ -11,7 +11,7 @@ function App() {
   <div className=' w-dvw h-fit xl:h-dvh flex flex-col overflow-hidden gap-1 text-white bg-gradient-to-br from-neutral-800 via-stone-950 to-neutral-800 '>
 
     <Navbar/>
-    <BrowserRouter></BrowserRouter>
+    
 
    
     <section className=' w-full flex   justify-center py-6  px-6 md:px-52'>
