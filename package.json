@@ -1,6 +1,6 @@
 {
   "name": "whether_app",
-  "homepage": "https://github.com/Darshan9121/React-Weather_App.git",
+  "homepage": "https://darshan9121.github.io/React-Weather_App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +14,7 @@
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1"
   },
   "scripts": {

@@ -10,8 +10,8 @@ import {IconChevronRight} from '@tabler/icons-react';
 
 export const WeatherCard = () => {
   return (
-    <div className="flex flex-col  items-center  gap-8 py-10 ">
-      <div className='flex justify-center items-center gap-16'>
+    <div className=" w-fdw flex flex-col  items-center  gap-8 py-10 ">
+      <div className='flex justify-center items-center gap-16 lg:gap-0'>
 
       <div class="invisible md:visible mx-8 p-2 font-semibold text-xl md:text-2xl dark:text-white border-2 border-neutral-600   border-2 bg-gradient-to-tl from-teal-500  flex flex-col gap-6 rounded-3xl md:w-full">
         <section className='w-full flex p-2 '>
@@ -64,7 +64,7 @@ export const WeatherCard = () => {
     </div>
 
         <IconChevronRight  className='invisible md:visible' size={200} />
-        <div class=" invisible md:visible mx-8 p-2 font-semibold text-xl md:text-2xl dark:text-white border-2 border-neutral-600   border-2 bg-gradient-to-tl from-teal-500  flex flex-col gap-6 rounded-3xl md:w-full">
+        <div class=" invisible lg:visible mx-8 p-2 font-semibold text-xl md:text-2xl dark:text-white border-2 border-neutral-600   border-2 bg-gradient-to-tl from-teal-500  flex flex-col gap-6 rounded-3xl md:w-full">
         <section className='w-full flex p-2 '>
           <section className='flex flex-col gap-28 justify-between w-1/2 '>
           <div className='flex '>
