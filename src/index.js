@@ -12,8 +12,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename='/React-Weather_App'>
       <Routes>
-        <Route path='/' index Component={<App/>}/>
-        <Route path='*' index Component={"<h1>Invalid Url</h1>"}/>
+        <Route path='/' index element={<App/>}/>
+        <Route path='*' index element={"<h1>Invalid Url</h1>"}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
