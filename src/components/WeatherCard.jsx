@@ -18,7 +18,7 @@ export const WeatherCard = (props) => {
     <div className=" w-full flex  flex-col items-start md:flex-row ">
       {/* <div className='lg:flex lg:items-center lg:visible w-full  w-full py-0'>  */}
                <IconChevronLeft className='invisible md:visible' size={100} />
-       <div className='flex flex-col gap-3  w-full  items-center   lg:gap-0 lg:flex-row'>
+       <div className='flex flex-col gap-3  w-full  items-center   lg:gap-6 lg:flex-row '>
 
       {
         data.length != 0?(
