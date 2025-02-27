@@ -107,11 +107,11 @@ function App() {
   return (
     <div className='w-dvw h-dvh  overflow-auto flex flex-col  gap-1 text-white bg-gradient-to-br from-neutral-800 via-stone-950 to-neutral-800'>
       <Navbar />
-      <section className='w-full flex justify-center py-6 px-6 md:px-52'>
+      <section className='  w-full flex justify-center items-center py-6 px-6 '>
         <input
           type='text'
           placeholder='Search Location!'
-          className='h-full w-full outline-none text-black text-sm rounded-full border-zinc-500 border-2 placeholder:text-center placeholder:text-zinc-600 active:font-bold font-semibold placeholder:font-semibold py-4 md:w-1/2 px-20'
+          className='h-full w-full outline-none text-black text-sm rounded-full border-zinc-500 border-2 placeholder:text-center placeholder:text-zinc-600 active:font-bold font-semibold placeholder:font-semibold py-4 md:w-full  lg:w-2/4'
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
@@ -122,7 +122,7 @@ function App() {
           Search
         </button>
       </section>
-      <WeatherCard data={data.slice(0,3)} />
+      <WeatherCard data={data.slice(0,3)}  city={search == ""?"Ahmedabad":search} />
     </div>
   );
 }

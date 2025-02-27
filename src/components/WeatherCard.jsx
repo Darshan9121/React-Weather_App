@@ -11,14 +11,14 @@ import {IconChevronRight} from '@tabler/icons-react';
 export const WeatherCard = (props) => {
   const data = props.data;
   console.log("weatehr:",props.data);
+  
 
  
   
   return (
-    <div className=" w-full flex  flex-col items-start md:flex-row ">
+    <div className="  w-full  flex  flex-col justify-normal items-center md:flex-row ">
       {/* <div className='lg:flex lg:items-center lg:visible w-full  w-full py-0'>  */}
-               <IconChevronLeft className='invisible md:visible' size={100} />
-       <div className='flex flex-col gap-3  w-full  items-center   lg:gap-6 lg:flex-row '>
+       <div className=' w-full flex flex-col gap-3   items-center md:flex-row  md:gap-1 md:justify-center md:overflow-hidden  '>
 
       {
         data.length != 0?(
@@ -31,10 +31,11 @@ export const WeatherCard = (props) => {
             let humidity = item.weather.main.humidity;
             console.log(name,temp,visibility,pressure, wind);
             if(Math.floor(data.length/2) == index){
-               //not  normal return 
-            return (
-               <>
-                 <div className=" font-semibold text-sm lg:text-xl md:text-xl dark:text-white border-2 border-neutral-600   border-2 bg-gradient-to-br from-fuchsia-600 to-black flex flex-col gap-6 rounded-3xl w-11/12 p-4">
+              //not  normal return 
+              return (
+                <>
+                <IconChevronLeft className='hidden md:block' size={70} />
+                 <div className=" font-semibold text-md order-first md:order-none md:text-sm dark:text-white border-neutral-600   border-2 bg-gradient-to-br from-fuchsia-600 to-black flex flex-col gap-6 rounded-3xl p-4 md:px-2 md:py-4 md:w-2/4 w-fit ">
                        <section className='w-full flex  '>
         <section className='flex flex-col gap-28 justify-between w-1/2 '>
         <div className='flex '>
@@ -44,20 +45,30 @@ export const WeatherCard = (props) => {
         </div>
           <p>Time</p>
         </section>
-        <section className='flex justify-center items-center md:gap-6'>
+        <section className='flex justify-center items-center md:gap-2'>
         <IconTemperature size={30}/>
-        <span className='text-6xl flex '>{temp}<IconTemperatureCelsius size={30}/></span>
+        <span className='text-6xl flex  md:text-3xl '>{temp}<IconTemperatureCelsius size={30}/></span>
         <IconSnowflake size={30}/>
         </section>
       </section>
-      
-        <ul className='w-full text-sm flex  gap-2 justify-evenly px-1 py-4'>
-          <li>Humidity:{humidity}</li>
-          <li>Visibility:{visibility}</li>
-          <li>Air Pressure:{pressure}</li>
-          <li>Wind:{wind}</li>
-        </ul>
+      <section className='flex flex-col gap-0'>
+
+<ul className='w-full text-sm flex  gap-1 justify-evenly  md:px-0 md:py-1'>
+  <li>Humidity</li>
+  <li>Visibility</li>
+  <li>Air Pressure</li>
+  <li>Wind</li>
+</ul>
+<ul className='w-full text-sm flex  gap-0 justify-around  md:px-2 md:py-0'>
+  <li>{humidity}</li>
+  <li>{visibility}</li>
+  <li>{pressure}</li>
+  <li>{wind}</li>
+</ul>
+</section>
+        
   </div>
+  <IconChevronRight  className='hidden md:block' size={70} />
   </>
           )
             }
@@ -65,29 +76,37 @@ export const WeatherCard = (props) => {
             // normal return 
             return (
             
-                <div className=" mx-0 p-1 font-semibold text-md md:text-2xl dark:text-white border-2 border-neutral-600   border-2 bg-gradient-to-tl from-teal-500  to-black flex flex-col gap-6 rounded-3xl  w-11/12 md:w-2/6">
+                <div className=" mx-0 px-2 py-1 font-semibold text-md md:text-2xl dark:text-white border-2 border-neutral-600   border-2 bg-gradient-to-tl from-teal-500  to-black flex flex-col gap-6 rounded-3xl  w-fit md:w-2/5 md:text-sm  md:py-2 md:px-1">
         <section className='w-full flex p-2 '>
           <section className='flex flex-col gap-28 justify-between w-1/2 '>
-          <div className='flex '>
-            <span>{name}</span>
+          <div className='flex items-center '>
+            <span >{name}</span>
             <IconMapPin/>
             
           </div>
             <p>Time</p>
           </section>
-          <section className='flex justify-center items-center md:gap-6'>
+          <section className='flex justify-center items-center md:gap-2'>
           <IconTemperature size={30}/>
-          <span className='text-6xl flex '>{temp}<IconTemperatureCelsius size={30}/></span>
+          <span className='text-6xl flex md:text-3xl  '>{temp}<IconTemperatureCelsius size={30}/></span>
           <IconSnowflake size={30}/>
           </section>
         </section>
-        
-          <ul className='w-full text-sm flex  gap-2 justify-evenly  px-0 py-4'>
-            <li>Humidity:{humidity}</li>
-            <li>Visibility:{visibility}</li>
-            <li>Air Pressure:{pressure}</li>
-            <li>Wind:{wind}</li>
+        <section className='flex flex-col gap-0'>
+
+          <ul className='w-full text-sm flex  gap-1 justify-evenly  md:px-0 md:py-1'>
+            <li>Humidity</li>
+            <li>Visibility</li>
+            <li>Air Pressure</li>
+            <li>Wind</li>
           </ul>
+          <ul className='w-full text-sm flex  gap-0 justify-around  md:px-2 md:py-0'>
+            <li>{humidity}</li>
+            <li>{visibility}</li>
+            <li>{pressure}</li>
+            <li>{wind}</li>
+          </ul>
+        </section>
          </div>
    
             )}
@@ -102,7 +121,6 @@ export const WeatherCard = (props) => {
         
        
         </div>
-      <IconChevronRight  className='invisible md:visible' size={100} />
       {/* </div> */}
 
         {/* <IconChevronLeft className='invisible md:visible' size={200}/>
